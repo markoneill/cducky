@@ -24,7 +24,7 @@ You can find various [payload examples](https://github.com/hak5darren/USB-Rubber
 
 ## Additional Notes
 
-cducky supports all of the standard Ducky Script commands and also supports STRING DELAY, which will delay individual characters in a string. It's keyboard layout files are are sufficient to support all keys, including NUMLOCK, BACKSPACE, and others unsupported by many other encoders.
+cducky supports all of the standard Ducky Script commands and also supports STRING_DELAY (see example below), which will delay individual characters in a string. It's keyboard layout files are are sufficient to support all keys, including NUMLOCK, BACKSPACE, and others unsupported by many other encoders.
 
 ## Example Script
 
