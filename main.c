@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 	outfile_path = DEFAULT_OUTFILE;
 	keyboard_layout = DEFAULT_KB_LAYOUT;
 
-	while ((c = getopt(argc, argv, "loi:")) != -1) {
+	while ((c = getopt(argc, argv, "l:o:i:")) != -1) {
 		switch (c) {
 			case 'l':
 				keyboard_layout = optarg;
@@ -44,6 +44,7 @@ int main(int argc, char* argv[]) {
 
 	if (infile_path == NULL) {
 		fprintf(stderr, "input file not specified\n");
+		usage(argv[0]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -56,9 +57,11 @@ int main(int argc, char* argv[]) {
 }
 
 void usage(char* name) {
-	printf("Usage: %s -i infile [-o file]\n", name);
-	printf("Example:\n");
+	printf("Usage: %s -i infile [-o file] [-l keyboard_layout ]\n", name);
+	printf("Examples:\n");
         printf("\t%s -i myscript.txt\n", name);
+        printf("\t%s -i myscript.txt -o output.bin\n", name);
+        printf("\t%s -i myscript.txt -o inject.bin -l languages/us.txt\n", name);
 	return;
 }
 
